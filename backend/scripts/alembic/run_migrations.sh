@@ -1,0 +1,1 @@
+docker-compose exec bot /venv/bin/python -m alembic upgrade head

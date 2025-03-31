@@ -1,0 +1,83 @@
+.get-tested {
+  @include padding;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.specialization-card {
+  @include hoverScaleTranslate;
+  @include displayFlex(center, center, column);
+
+  height: 130px;
+  width: 150px;
+  gap: 12px;
+  border-radius: 12px;
+  border: 1px solid $tg-theme-secondary-bg;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  .specialization-card__text {
+    @include displayFlex(center, center, column);
+    position: relative;
+    padding: 13px;
+    height: 100%;
+    z-index: 3; /* Ensures text is rendered above image */
+    color: $tg-theme-button-text;
+    gap: 13px;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 50%;
+      z-index: 2; /* Ensures image is rendered below text */
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Ensures image is rendered below text */
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: $font-weight-bold;
+    max-width: 125px;
+    word-wrap: break-word;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 15px;
+  }
+}

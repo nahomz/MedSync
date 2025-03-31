@@ -1,0 +1,190 @@
+.resume {
+  @include padding;
+
+  &__header {
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      margin-bottom: -20px;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: $tg-theme-text;
+      opacity: 0.3;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        margin-bottom: -20px;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: $tg-theme-text;
+        opacity: 0.3;
+      }
+    }
+
+    &__text {
+      color: $tg-theme-hint;
+      font-size: 13px;
+      font-weight: $font-weight-semibold;
+      line-height: 119%;
+      margin-bottom: 15px;
+      margin-left: 15px;
+
+      &--color-dark {
+        color: $tg-theme-text;
+        margin-top: 5px;
+        margin-left: 15px;
+      }
+    }
+
+    &__title {
+      color: $tg-theme-text;
+      font-size: 17px;
+      font-weight: $font-weight-bold;
+      line-height: 119%;
+      margin-left: 15px;
+
+      &--font-regular {
+        font-weight: $font-weight-regular;
+      }
+    }
+
+    &__link {
+      color: $tg-theme-text;
+      font-size: 15px;
+      font-weight: $font-weight-semibold;
+      line-height: 119%;
+      margin-top: 5px;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      gap: 4px;
+      background: $tg-theme-button;
+      color: $tg-theme-button-text;
+
+      font-size: 13px;
+      font-weight: $font-weight-bold;
+      border-radius: 26px;
+      padding: 4px 0;
+      width: 80px;
+      margin-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__doctor,
+  &__diagnostics {
+    @include displayFlex(start, center, row);
+    gap: 7px;
+    margin-left: 15px;
+
+    &__image {
+      width: 57px;
+      height: 57px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+  &__button {
+    @include displayFlex(center, center, row);
+
+    gap: 10px;
+    text-decoration: none;
+    background: $tg-theme-button;
+    box-shadow: $color-box-shadow;
+    color: $tg-theme-button-text;
+    font-size: 17px;
+    font-weight: $font-weight-bold;
+    border-radius: 30px;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: 20px;
+
+    &:hover {
+      filter: brightness(1.05);
+    }
+  }
+
+  .box {
+    @include displayFlex(space-between, center, row);
+
+    margin-bottom: 22px;
+
+    &__title {
+      @include displayFlex(start, center, row);
+
+      gap: 6px;
+      margin-bottom: 9px;
+      margin-left: 15px;
+
+      &__icon {
+        fill: $tg-theme-hint;
+        width: 8px;
+        height: 12px;
+        object-fit: cover;
+      }
+
+      &__text {
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        line-height: 119%;
+      }
+    }
+
+    &__text {
+      font-size: 13px;
+      font-weight: $font-weight-regular;
+      line-height: 119%;
+      margin-bottom: 8px;
+      margin-left: 15px;
+
+      &--color-light {
+        color: $tg-theme-text;
+      }
+    }
+
+    &__button {
+      text-align: center;
+      text-decoration: none;
+      gap: 4px;
+      background: $tg-theme-button;
+      color: $tg-theme-button-text;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+      border-radius: 26px;
+      padding: 7px 0;
+      width: 90px;
+
+      &:hover {
+        filter: brightness(1.05);
+      }
+    }
+  }
+}

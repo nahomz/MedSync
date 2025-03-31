@@ -1,0 +1,178 @@
+.time-details {
+  @include padding;
+
+  &__header {
+    @include lineAfter;
+    margin-bottom: 40px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.calendar-container {
+  @include lineAfter;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .month-selector {
+    @include displayFlex(space-between, center, row);
+    padding-inline: 13px;
+
+    &__wrap {
+      @include displayFlex(center, center, row);
+      gap: 8px;
+    }
+
+    &__icon {
+      width: 12px;
+      height: 12px;
+      stroke: $tg-theme-hint;
+      path {
+        fill: $tg-theme-hint;
+      }
+    }
+
+    &__text {
+      font-size: 21px;
+      font-weight: $font-weight-bold;
+      line-height: 119%;
+    }
+
+    &__button {
+      background: $tg-theme-bg;
+      border: solid $tg-theme-text;
+      border-width: 0 3px 3px 0;
+      padding: 4px;
+      cursor: pointer;
+
+      &--next {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      &--prev {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+    }
+  }
+
+  .weekdays-selector {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    &__weekday {
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      list-style: none;
+      color: $tg-theme-text;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-weight: $font-weight-bold;
+      line-height: normal;
+    }
+  }
+
+  .days-selector {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+    margin: 0;
+
+    &__day {
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      list-style: none;
+      color: $tg-theme-text;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-weight: $font-weight-regular;
+      width: 28px;
+      height: 22px;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      padding-top: 4px;
+      margin-bottom: 4px;
+
+      &--active {
+        background: $tg-theme-button;
+        color: $tg-theme-button-text;
+      }
+      &--unavailable {
+        color: $tg-theme-hint;
+        background: $tg-theme-bg;
+      }
+
+      &--available {
+        background: $tg-theme-bg;
+        &:hover {
+          background: $tg-theme-button;
+          color: $tg-theme-bg;
+        }
+      }
+    }
+  }
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .time-selector {
+    @include displayFlex(start, center, row);
+
+    gap: 8px;
+    padding-inline: 13px;
+
+    &__icon {
+      width: 12px;
+      height: 12px;
+      fill: $tg-theme-hint;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+      line-height: 119%;
+    }
+  }
+
+  .time-slot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    &__button {
+      background: $tg-theme-secondary-bg;
+      border: none;
+      border-radius: 26px;
+      cursor: pointer;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      padding: 15px 0;
+      width: 100px;
+      color: $tg-theme-text;
+
+      &--active {
+        background: $tg-theme-button;
+        color: $tg-theme-button-text;
+        box-shadow: $color-box-shadow;
+      }
+    }
+  }
+}

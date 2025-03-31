@@ -1,0 +1,38 @@
+.landing-page {
+  padding-inline: 30px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+
+  &__icon {
+    @include displayFlex(center, center, column);
+    margin-bottom: 20px;
+
+    &--img {
+      width: 208px;
+      height: 40px;
+    }
+  }
+
+  &__text {
+    color: $tg-theme-text;
+    text-align: center;
+    font-size: 19px;
+    line-height: normal;
+  }
+
+  &__bottom {
+    color: $tg-theme-text;
+    text-align: center;
+    font-size: 13px;
+    line-height: 118.5%;
+  }
+}
+
+.invalid-version h1 {
+  padding: 20px;
+  color: red;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-bottom: 20px;
+}

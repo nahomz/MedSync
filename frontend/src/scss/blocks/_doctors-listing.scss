@@ -1,0 +1,154 @@
+.doctor-selection {
+  padding-inline: 13px;
+  padding-top: 32px;
+  padding-bottom: 10px;
+
+
+  .nav {
+    margin-bottom: 20px;
+    overflow-x: auto;
+
+    &__list {
+      @include displayFlex(space-between, center, row);
+
+      list-style: none;
+      text-align: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      color: $tg-theme-text;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &__button {
+      font-size: 13px;
+      line-height: normal;
+      font-weight: $font-weight-bold;
+      color: $tg-theme-text;
+      padding: 6px 15px;
+      border: 1px solid $tg-theme-secondary-bg;
+      border-radius: 19px;
+
+      &--active {
+        background: $tg-theme-button;
+        border-radius: 19px;
+        color: $tg-theme-button-text;
+
+        &:hover {
+          background: $tg-theme-button;
+        }
+      }
+    }
+  }
+
+  .main {
+    @include displayFlex(center, center, column);
+    gap: 15px;
+  }
+
+  .card {
+    @include displayFlex(space-between, flex-start, row);
+
+    gap: 20px;
+    background: $tg-theme-secondary-bg;
+    border-radius: 12px;
+    width: 100%;
+    cursor: pointer;
+
+    .card__review__img {
+      fill: $tg-theme-hint;
+    }
+
+    &--active {
+      background: $tg-theme-button;
+      color: $tg-theme-button-text;
+
+      .card__title,
+      .card__subtitle,
+      .card__review__text,
+      .card__address,
+      .card__price {
+        color: $tg-theme-button-text;
+      }
+
+      &:hover {
+        background: $tg-theme-button;
+      }
+    }
+
+    &__image {
+      height: 125px;
+
+      &__img {
+        object-fit: cover;
+        width: 125px;
+        height: 125px;
+        border-radius: 12px;
+      }
+    }
+
+    &__info {
+      padding-top: 15px;
+      width: 180px;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+      line-height: 119%;
+    }
+
+    &__subtitle {
+      font-size: 15px;
+      font-weight: $font-weight-regular;
+      line-height: 119%;
+      margin-bottom: 11px;
+    }
+
+    &__review {
+      @include displayFlex(start, center, row);
+
+      gap: 5px;
+      margin-bottom: 11px;
+
+      &__img {
+        width: 10px;
+        height: 10px;
+      }
+
+      &__text {
+        text-align: center;
+        font-size: 12px;
+        font-weight: $font-weight-semibold;
+      }
+    }
+
+    &__price {
+      line-height: 119%;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    &__address {
+      line-height: 119%;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    &__icon {
+      padding-top: 22px;
+      padding-right: 16px;
+
+      &__img {
+        width: 5px;
+        height: 5px;
+        border: 1px solid white;
+        border-radius: 50%;
+      }
+    }
+  }
+}

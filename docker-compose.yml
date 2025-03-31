@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  medsyncwebapp:
+    image: medsyncwebapp
+    build:
+      context: frontend
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3344:3344

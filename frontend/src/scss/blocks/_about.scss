@@ -1,0 +1,104 @@
+.about {
+  @include padding;
+
+  &__content {
+    @include displayFlex(center, center, column);
+  }
+
+  &__img {
+    border-radius: 100px;
+    width: 143px;
+    height: 151px;
+    margin-bottom: 9px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: $font-weight-bold;
+    line-height: 119%;
+    margin-bottom: 2px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 16px;
+    line-height: 119%;
+  }
+
+  &__status {
+    @include displayFlex(center, center, row);
+
+    gap: 10px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+
+    &__text {
+      font-size: 14px;
+      line-height: 119%;
+    }
+
+    &__img {
+      width: 5px;
+      height: 5px;
+    }
+  }
+
+  &__button {
+    @include displayFlex(center, center, row);
+
+    text-decoration: none;
+    background: $tg-theme-button;
+    box-shadow: $tg-theme-secondary-bg;
+    color: $tg-theme-button-text;
+    font-size: 17px;
+    font-weight: $font-weight-bold;
+    border-radius: 31px;
+    padding: 15px 0;
+    width: 100%;
+    margin-bottom: 17px;
+
+    &:hover {
+      filter: brightness(1.05);
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  &__section {
+    @include displayFlex(start, start, column);
+
+    gap: 8px;
+
+    &__title {
+      font-size: 15px;
+      font-weight: $font-weight-bold;
+      line-height: 119%;
+    }
+
+    &__text {
+      font-size: 13px;
+      line-height: 119%;
+    }
+  }
+}
+
+.services {
+ @include lineAfter;
+
+  &__list {
+    padding: 0;
+    margin: 0 0 0 20px;
+  }
+}
+
+.certificates,
+.working-time,
+.experience {
+  @include lineAfter;
+}
+

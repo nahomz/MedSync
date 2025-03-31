@@ -1,0 +1,7 @@
+version: 2
+authtoken: 2uoMJxfmEljebDvrX10bYUCmFds_5nLKsivD8VYG5awkcqDTk
+tunnels:
+  first:
+    addr: app:5173
+    proto: http
+    hostname: ngrok http --url=broadly-immense-bluebird.ngrok-free.app 80

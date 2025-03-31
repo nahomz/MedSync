@@ -1,0 +1,34 @@
+@mixin padding {
+  padding-inline: 25px;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+@mixin hoverScaleTranslate {
+  &:hover {
+    transform: scale(1.05) translate(0, -5px);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@mixin displayFlex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin lineAfter {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    margin-bottom: -12px;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: $tg-theme-text;
+    opacity: 0.3;
+  }
+}

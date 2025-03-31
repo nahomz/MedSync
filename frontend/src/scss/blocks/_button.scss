@@ -1,0 +1,43 @@
+.button {
+  font-family: "Josefin Sans", sans-serif;
+  background: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.arrow-button {
+  @include displayFlex(center, center, row);
+
+  text-decoration: none;
+  gap: 10px;
+  background: $tg-theme-button;
+  box-shadow: $color-box-shadow;
+  color: $tg-theme-button-text;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  border-radius: 45px;
+  padding: 15px 0;
+  width: 200px;
+  margin: 22px auto 27px;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+}
+
+.button-second {
+  @include displayFlex(center, center, row);
+
+  color: $tg-theme-button;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  margin-bottom: 80px;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+}

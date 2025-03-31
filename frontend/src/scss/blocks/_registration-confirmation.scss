@@ -1,0 +1,24 @@
+.registration-confirmation {
+  @include displayFlex(center, center, column);
+
+  padding-inline: 30px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  gap: 5px;
+
+  &__title {
+    color: $tg-theme-hint;
+    font-size: 37px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    line-height: 119%;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: $font-weight-regular;
+    text-align: center;
+    line-height: 119%;
+
+  }
+}

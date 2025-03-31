@@ -1,0 +1,100 @@
+# Project information
+site_name: MedSync Telegram Mini App Documentation
+site_description: Comprehensive guide on setting up and understanding the MedSync Telegram Mini App using FastAPI, React.js, Docker, and more.
+site_author: Kostiantyn
+site_url: https://docs.medsync.botfather.dev
+docs_dir: docs
+site_dir: public_docs
+
+# Repository
+repo_name: Latand/MedSyncWebApp
+repo_url: https://github.com/Latand/MedSyncWebApp/
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2023 Kostiantyn
+
+# Configuration
+theme:
+  name: material
+  custom_dir: docs/overrides
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  font:
+    text: Open Sans
+    code: Jetbrains Mono
+
+  features:
+    - content.code.copy
+    - content.code.select
+
+# Extras
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/bot_devs_novice
+      name: "Join Our Telegram Chat"
+    - icon: fontawesome/brands/github
+      link: https://github.com/Latand/MedSyncWebApp/
+      name: GitHub Repository
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      use_pygments: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - meta
+  - attr_list
+  - toc:
+      permalink: true
+
+nav:
+  - 'Overview': index.md
+  - 'UserFlow': userflow.md
+  - 'Setting Up & Running the App':
+    - '1. Configuration': configuration.md
+    - '2. Dependency Initialization Guidelines': dependencies-initialization.md
+    - '3.1 Local Deployment': development-environment.md
+    - '3.2 Live Deployment': production-environment.md
+    - '4. Launching the App': running.md
+  - 'Project Architecture':
+    - 'Frontend Development': frontend.md
+    - 'Bot and REST API Setup': backend.md
+    - 'Database': database.md
+    - 'Docker': docker.md
+  - 'Other':
+      - 'Ngrok': ngrok.md
+      - 'Obtaining a Domain Name': owned-domain.md
+  - 'Telegram WebApp Integration Features': telegram.md
+plugins:
+  - search:
+      lang:
+        - en
+
