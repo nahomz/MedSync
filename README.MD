@@ -7,10 +7,6 @@ professionals, providing an easy booking system for medical services via the Tel
 
 You can find the bot Here: [Bot in Telegram](https://t.me/MedSyncbot)
 
-## Documentation
-
-For a detailed guide on the project, its structure, and how to use or contribute, please visit our documentation at [docs.medsync.botfather.dev](https://docs.medsync.botfather.dev).
-
 ## Acknowledgements
 
 This project is a submission for a [Telegram contest](https://t.me/contest/327). 
